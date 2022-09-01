@@ -19,4 +19,7 @@ for books in soup.find_all('li', class_='col-xs-6 col-sm-4 col-md-3 col-lg-3'):
     book_dict['Book availability'].append(book_avail)
     
 book_table = pd.DataFrame(book_dict)
-print(book_table)
+
+
+book_csv = book_table.to_csv()
+print(‘CSV file: ‘, book_csv)
